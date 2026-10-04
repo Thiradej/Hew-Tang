@@ -1,5 +1,50 @@
 @import "tailwindcss";
 
+@theme {
+  /* Chop Tang palette — sampled from the logo */
+  --color-cream: #F8F4E9;
+  --color-ink: #0E3E66;
+  --color-ink-deep: #15183B;
+  --color-ring: #3285B9;
+  --color-sky: #93D6F0;
+  --color-pig: #FDB6B4;
+  --color-tang-orange: #F46A43;
+  --color-tang-yellow: #FEC969;
+  --color-coin: #F5C542;
+
+  --font-display: 'Mitr', 'Hanken Grotesk', system-ui, sans-serif;
+
+  --animate-card-entrance: card-entrance 700ms cubic-bezier(0.22, 1.2, 0.36, 1) both;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-twinkle: twinkle 2.4s ease-in-out infinite;
+  --animate-slow-spin: slow-spin 40s linear infinite;
+  --animate-coin-flip: coin-flip 0.9s linear infinite;
+  --animate-bob: bob 4s ease-in-out infinite;
+
+  @keyframes card-entrance {
+    from { opacity: 0; transform: translateY(28px) scale(0.97); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-8deg); }
+    50% { transform: translateY(-16px) rotate(10deg); }
+  }
+  @keyframes twinkle {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    50% { transform: scale(0.7) rotate(20deg); opacity: 0.6; }
+  }
+  @keyframes slow-spin {
+    to { transform: rotate(360deg); }
+  }
+  @keyframes coin-flip {
+    to { transform: rotateY(360deg); }
+  }
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+}
+
 body{
   background-color: #0B0E11;
   color: #E1E2E7;

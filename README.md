@@ -1,4 +1,4 @@
-# Hew Tang
+# Chop Tang
 
 A personal finance web app that combines trading P&L tracking with daily expense and budget management in one place.
 
